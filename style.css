@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    height: 100vh;
+    width: 100%;
+    font-family: "Outfit", serif;
+    cursor: default;
+}
+
+:root {
+    --main-color: #ffff;
+    
+    --font-color: #f1f1f1;
+
+    --aside-color: #1992D4;
+    --search-bg-color: #E2E8F0;
+    --yellow-border: #F0B429;
+
+    --gray-font-color: #636363;
+
+    --hover-bg-color: #ffffff22;
+}
+
+
+p {
+    color: var(--font-color);
+    font-size: 16px;
+    font-weight: 600;
+}
+
+svg {
+    height: 24px;
+    fill: var(--main-color);
+}
+
+a {
+    text-decoration: none;
+}
+
+        /*  -- MAIN CODE AREA START --  */
+
+section {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+}
+
+        /*  -- START HEADER CODE --  */
+
+aside {
+    height: 100vh;
+    width: 280px;
+    top: 0;
+    left: 0;
+    position: fixed;
+    box-sizing: border-box;
+    background-color: var(--aside-color);
+
+    display: grid;
+    grid-row-start: 1;
+    grid-row-end: 6;
+    grid-template-rows: 1fr 7fr;
+    padding: 5px;
+}
+
+/* -- header logo area -- */
+
+.logo-area {
+    display: grid;
+    padding: 3px 20px;
+    .logo-text {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        #logo-img {
+            height: 38px;
+            width: 38px;
+            fill: var(--font-color);
+        }
+        #logo-font {
+            font-family: "Unbounded", serif;
+            font-size: 20px;
+        }
+    }
+}
+
+/* -- header nav area -- */
+
+.nav-area {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    
+    .upper-nav-area {
+        display: grid;
+        padding: 3px 20px;
+        #logo-text {
+            padding: 0 9px;
+            display: grid;
+            grid-template-columns: 38px 1fr;
+            align-items: center;
+            border-radius: 14px;
+        }
+        .home-icon {
+            background-color: var(--hover-bg-color);
+        }
+        #logo-text:hover {
+            background-color: var(--hover-bg-color);
+        }
+    }
+    
+    .lower-nav-area {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        .lower-nav-btn-area {
+            display: grid;
+            padding: 3px 20px;
+            #logo-text {
+                padding: 0 9px;
+                display: grid;
+                grid-template-columns: 38px 1fr;
+                align-items: center;
+                border-radius: 14px;
+            }
+            #logo-text:hover {
+                background-color: var(--hover-bg-color);
+            }
+        }
+    }
+}
+
+
+
+
+main {
+    grid-column: 2;
+    height: 200vh;
+    overflow-y: auto;
+    background-color: var(--main-color);
+}
