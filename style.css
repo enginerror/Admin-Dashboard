@@ -127,10 +127,12 @@ section {
     overflow-y: auto;
     background-color: var(--main-color);
 }
+
+        /*  -- START HEADER SECTION --  */
 header {
     height: 11vh;
     display: grid;
-    grid-template-columns: 1fr 250px 100px 200px;
+    grid-template-columns: 1fr 250px 95px 240px;
     .search-area-section {
         display: grid;
         place-content: center;
@@ -176,6 +178,42 @@ header {
             font-family: "Unbounded", serif;
             color: var(--black-color);
             font-size: 14px;
+        }
+    }
+}
+
+        /*  -- START SUB HEADER SECTION --  */
+
+sub-header {
+    height: 15vh;
+    display: grid;
+    grid-template-columns: 400px 1fr 355px;
+    .project-img-font-area {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 17px;
+        .font-1 {
+            color: var(--black-color);
+        }
+        .font-2 {
+            color: var(--black-color);
+            font-size: 20px;
+        }
+    }
+    .button-area {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 11px;
+        button {
+            background-color: var(--aside-color);
+            color: var(--font-color);
+            border: none;
+            height: 35px;
+            width: 76px;
+            border-radius: 20px;
+            font-weight: 600;
         }
     }
 }
