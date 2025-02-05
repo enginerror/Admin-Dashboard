@@ -11,6 +11,7 @@ body {
     cursor: default;
     display: grid;
     grid-template-columns: 260px 1fr;
+    overflow: hidden; /* remove 2nd scroll bar */
 }
 
 :root {
@@ -39,7 +40,6 @@ svg {
 a {
     text-decoration: none;
 }
-
 
         /*  -- START HEADER CODE --  */
 
@@ -124,8 +124,10 @@ aside {
 section {
     grid-column: 2;
     height: 200vh;
+    overflow-x: hidden;
     overflow-y: auto;
     background-color: var(--main-color);
+    box-sizing: border-box;
 }
 
         /*  -- START HEADER SECTION --  */
@@ -188,6 +190,7 @@ sub-header {
     height: 15vh;
     display: grid;
     grid-template-columns: 400px 1fr 355px;
+    border-bottom: 7px solid #ced3da7b;
     .project-img-font-area {
         display: flex;
         justify-content: center;
@@ -214,6 +217,71 @@ sub-header {
             width: 76px;
             border-radius: 20px;
             font-weight: 600;
+        }
+    }
+}
+
+        /*  -- START MAIN SECTION --  */
+
+main {
+    height: 200vh;
+    background-color: #E2E8F0;
+    display: grid;
+    grid-template-columns: 1fr 265px;
+    font-family: "Roboto", serif;
+}
+        /*  -- START MAIN PROJECT SECTION --  */
+
+.project-area-section {
+    display: grid;
+    grid-template-rows: 30px 1fr;
+    padding: 18px;
+    .project-area-heading-font {
+        display: flex;
+        align-items: center;
+        .project-font {
+            color: var(--black-color);
+            font-size: 17px;
+        }
+    }
+    .project-div-area {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        .project-container {
+            height: 33vh;
+            width: 27vw;
+            border-radius: 7px;
+            background-color: var(--main-color);
+            border-left: 7px solid var(--yellow-border);
+            padding: 30px 25px;
+            display: grid;
+            grid-template-rows: 1fr 30px;
+            .container-text {
+                display: flex;
+                flex-direction: column;
+                gap: 6px;
+                p {
+                    font-weight: 400;
+                    font-size: 14px;
+                    color: var(--gray-font-color);
+                }
+            }
+            .container-icons {
+                display: grid;
+                grid-template-columns: 1fr 50px 50px 50px;
+                .container-icons1, .container-icons2, .container-icons3 {
+                    display: grid;
+                    place-content: center;
+                    svg {
+                        fill: var(--black-color);
+                    }
+                    svg:hover {
+                        fill: var(--aside-color);
+                        transition: .2s;
+                    }
+                }
+            }
         }
     }
 }
